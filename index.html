@@ -5,8 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora Panificação</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <header>
+        <h1>Precificação</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </header>
+    <!-- Formulário -->
+    <main>
+        <section class="card">
+            <form id="calc-form">
+                <label for="produto">
+                    Nome do Produto:
+                    <input type="text" id="produto" required>
+                </label>
+                <br>
+                <label for="qtd">
+                    Quantidade da caixa:
+                    <input type="number" id="qtd" min="1" step="1" required>
+                </label>
+                <br>
+                <label for="custo">
+                    Custo total da caixa (R$):
+                    <input type="number" id="custo" step="0.01" inputmode="decimal" required>
+                </label>
+                <br>
+                <label for="margem">
+                    Margem de lucro (%):
+                    <input type="number" id="margem" step="0.1" required>
+                </label>
+                <div class="actions">
+                    <button type="submit" class="primary">Adicionar Produto</button>
+                    <button type="reset" class="ghost">Limpar</button>
+                </div>
+            </form>
+        </section>
+        <!-- Lista de produtos -->
+        <section id="produtos" class="cards-list"></section>
+    </main>
 </body>
 </html>
