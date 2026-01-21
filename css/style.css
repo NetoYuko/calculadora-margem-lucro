@@ -1,0 +1,22 @@
+/* Variáveis */
+:root {
+    /* cores */
+    --primary-color: #2ecc71;
+    --primary-dark: #27ae60;
+    --bg-color: #0d1117;
+    --bg-card: #161b22;
+    --text-color: #c9d1d9;
+    
+    /* extras */
+    --radius: 8px;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --gap: 1rem;
+}
+
+/* Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
