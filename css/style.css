@@ -15,8 +15,16 @@
 
 /* Reset */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1rem;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
