@@ -40,13 +40,32 @@
         </section>
         <!-- Lista de produtos -->
         <section id="produtos" class="cards-list"></section>
-        <section class="product-list">
-            <article class="product-card">
-                <h3 class="product-card__name">Pão Francês</h3>
-                <p class="product-card__info">Qtd: 50 | Margem: 30%</p>
-                <span class="product-card__price">R$ 0,50</span>
-            </article>
-        </section>
+        <!-- teste estilização -->
+        <article class="card product-card">
+            <h2 class="product-card--name">Pão Francês</h3>
+            <dl class="product-card--data">
+                <div class="product-card-group">
+                    <dt>Quantidade do lote:</dt>
+                    <dd><strong>50</strong></dd>
+                </div>
+                <div class="product-card-group">
+                    <dt>Margem de Lucro:</dt>
+                    <dd><strong>50</strong></dd>
+                </div>
+                <div class="product-card-group">
+                    <dt>Custo/UND. :</dt>
+                    <dd><strong>50</strong></dd>
+                </div>
+                <div class="product-card-group highlighted">
+                    <dt>Preço Sugerido:</dt>
+                    <dd><strong>R$50</strong></dd>
+                </div>
+            </dl>
+            <footer class="product-card--actions">
+                <button class="btn-product ghost">Editar</button>
+                <button class="btn-product danger">Excluir</button>
+            </footer>
+        </article>
     </main>
 </body>
 </html>
