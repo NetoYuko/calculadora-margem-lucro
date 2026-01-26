@@ -1,16 +1,17 @@
 /* Variáveis */
 :root {
     /* cores */
-    --primary-color: #2ecc71;
-    --primary-dark: #27ae60;
+    --primary-color: #238636;
+    --f-color: #2ea043;
     --bg-color: #0d1117;
     --bg-card: #161b22;
     --text-color: #c9d1d9;
+    --muted: #8b949e;
+    --border-color: #30363d;
     
     /* extras */
     --radius: 8px;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --gap: 1rem;
 }
 
 /* Reset */
@@ -27,4 +28,91 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+header p {
+    font-size: 0.8rem;
+    margin-bottom: 16px
+}
+
+.container-pai {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* Formulário */
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.card label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.card input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.card input:focus {
+    border-color: var(--f-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(35, 134, 54, 0.4);
+}
+
+/* Botões */
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.actions button {
+    flex: 1;
+    padding: 12px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.primary {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+}
+
+.ghost {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--muted);
 }
