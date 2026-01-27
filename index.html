@@ -10,62 +10,90 @@
 <body>
     <header>
         <h1>Precificação 🖩</h1>
-        <p>Preencha as informações e cadastre o produto.</p>
     </header>
-    <!-- Formulário -->
-    <main class="container-pai">
-        <section class="card">
-            <form id="calc-form">
-                <label for="produto">
-                    Nome do Produto:
-                    <input type="text" id="produto" required>
-                </label>
-                <label for="qtd">
-                    Quantidade da caixa:
-                    <input type="number" id="qtd" min="1" step="1" required>
-                </label>
-                <label for="custo">
-                    Custo total da caixa (R$):
-                    <input type="number" id="custo" step="0.01" inputmode="decimal" required>
-                </label>
-                <label for="margem">
-                    Margem de lucro (%):
-                    <input type="number" id="margem" step="0.1" required>
-                </label>
-                <div class="actions">
-                    <button type="submit" class="primary">Adicionar Produto</button>
-                    <button type="reset" class="ghost">Limpar</button>
-                </div>
-            </form>
-        </section>
-        <!-- Lista de produtos -->
-        <section id="produtos" class="cards-list"></section>
-        <!-- teste estilização -->
-        <article class="card product-card">
-            <h2 class="product-card--name">Pão Francês</h3>
-            <dl class="product-card--data">
-                <div class="product-card-group">
-                    <dt>Quantidade do lote:</dt>
-                    <dd><strong>50</strong></dd>
-                </div>
-                <div class="product-card-group">
-                    <dt>Margem de Lucro:</dt>
-                    <dd><strong>50</strong></dd>
-                </div>
-                <div class="product-card-group">
-                    <dt>Custo/UND. :</dt>
-                    <dd><strong>50</strong></dd>
-                </div>
-                <div class="product-card-group highlighted">
-                    <dt>Preço Sugerido:</dt>
-                    <dd><strong>R$50</strong></dd>
-                </div>
-            </dl>
-            <footer class="product-card--actions">
-                <button class="btn-product ghost">Editar</button>
-                <button class="btn-product danger">Excluir</button>
-            </footer>
-        </article>
+
+    <!-- Tela inicial -->
+    <main id="screen-home" class="app-screen">
+        <nav class="dashboard-nav">
+            <button class="nav-card">
+                <span class="nav-card-icon">#</span>
+                <span class="nav-card-label">Novo Produto</span>
+            </button>
+            <button class="nav-card">
+                <span class="nav-card-icon">#</span>
+                <span class="nav-card-label">Ver Produtos</span>
+            </button>
+        </nav>
     </main>
+
+    <!-- cadastrar produto -->
+
+    <section id="screen-form" class="app-screen">
+        <header class="screen-header">
+            <h2 id="form-title">Cadastrar Produto</h2>
+        </header>
+        <form id="calc-form">
+            <label for="produto">
+                Nome do Produto:
+                <input type="text" id="produto" required>
+            </label>
+            <label for="qtd">
+                Quantidade da caixa:
+                <input type="number" id="qtd" min="1" step="1" required>
+            </label>
+            <label for="custo">
+                Custo total da caixa (R$):
+                <input type="number" id="custo" step="0.01" inputmode="decimal" required>
+            </label>
+            <label for="margem">
+                Margem de lucro (%):
+                <input type="number" id="margem" step="0.1" required>
+            </label>
+            <div class="actions">
+                <button type="submit" class="primary">Adicionar Produto</button>
+                <button type="reset" class="ghost">Limpar</button>
+            </div>
+        </form>
+        <button class="btn-back">Voltar</button>
+    </section>
+
+    <!-- Listar produtos cadastrados -->
+     <section id="screen-list" class="app-screen">
+        <header class="screen-header">
+            <h2>Meus Produtos</h2>
+        </header>
+        <nav class="search-bar">
+            <input type="text" id="search-input" placeholder="Buscar produto...">
+        </nav>
+        <main id="products-container" class="product-grid">
+            <!-- teste estilização -->
+            <article class="card product-card">
+                <h2 class="product-card--name">Pão Francês</h2>
+                <dl class="product-card--data">
+                    <div class="product-card-group">
+                        <dt>Quantidade do lote:</dt>
+                        <dd><strong>50</strong></dd>
+                    </div>
+                    <div class="product-card-group">
+                        <dt>Margem de Lucro:</dt>
+                        <dd><strong>50</strong></dd>
+                    </div>
+                    <div class="product-card-group">
+                        <dt>Custo/UND. :</dt>
+                        <dd><strong>50</strong></dd>
+                    </div>
+                    <div class="product-card-group highlighted">
+                        <dt>Preço Sugerido:</dt>
+                        <dd><strong>R$50</strong></dd>
+                    </div>
+                </dl>
+                <footer class="product-card--actions">
+                    <button class="btn-product ghost">Editar</button>
+                    <button class="btn-product danger">Excluir</button>
+                </footer>
+            </article>
+        </main>
+        <button class="btn-back">Voltar</button>
+     </section>
 </body>
 </html>
