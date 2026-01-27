@@ -17,6 +17,19 @@
 
 /* Reset */
 
+#screen-home {
+    display: block;
+}
+
+#screen-form {
+    display: none;
+}
+
+#screen-list { 
+    display: none;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -33,7 +46,6 @@ body {
 
 header{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 15px;
@@ -43,12 +55,54 @@ header h1 {
     font-size: 1.8rem;
 }
 
-.container-pai {
+.app-screen {
+    padding: 16px;
     max-width: 600px;
     margin: 0 auto;
-    padding: 16px;
+    animation: fadeIn 0.3 ease;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* Dashboard */
+
+.dashboard-nav {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.nav-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 24px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-card:active {
+    transform: scale(0.95);
+    background: #1c2128;
+}
+
+.nav-card-icon {
+    font-size: 1.5rem;
+    color: var(--f-color);
+}
+
+.nav-card-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
 /* Formulário */
 
 .card {
